@@ -1,11 +1,7 @@
-using TheShop.Discount.Context;
-using TheShop.Discount.Services;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddSingleton<DiscountContext>();
-builder.Services.AddScoped<IDiscountCodeService, DiscountCodeService>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
