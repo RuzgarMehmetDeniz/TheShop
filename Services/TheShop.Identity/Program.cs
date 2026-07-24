@@ -1,16 +1,6 @@
-using Microsoft.EntityFrameworkCore;
-using TheShop.Order.Context;
-using TheShop.Order.Services.CustomerOrderServices;
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<OrderContext>(options =>
-{
-    options.UseNpgsql(
-        builder.Configuration.GetConnectionString("PostgreSqlConnection"));
-});
-
-builder.Services.AddScoped<ICustomerOrderService, CustomerOrderService>();
+// Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
