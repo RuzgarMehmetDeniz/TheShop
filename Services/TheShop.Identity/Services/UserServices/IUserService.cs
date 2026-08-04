@@ -6,5 +6,6 @@ namespace TheShop.Identity.Services.UserServices
     {
         Task<bool> CreateUserAsync(CreateRegisterDto createRegisterDto);
         Task<string> LoginAsync(UserLoginDto userLoginDto);
+        Task<List<ResultUsersDto>> GetAllUserAsync();
     }
 }

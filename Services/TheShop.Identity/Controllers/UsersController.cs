@@ -41,5 +41,11 @@ namespace TheShop.Identity.Controllers
 
             return Ok(result);
         }
+        [HttpGet("userlist")]
+        public async Task<IActionResult> UserList()
+        {
+            var values = await _userService.GetAllUserAsync();
+            return Ok(values);
+        }
     }
 }

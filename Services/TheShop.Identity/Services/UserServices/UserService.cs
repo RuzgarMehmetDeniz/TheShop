@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using TheShop.Identity.Context;
 using TheShop.Identity.Dtos;
@@ -41,6 +42,18 @@ namespace TheShop.Identity.Services.UserServices
             }
 
             return "Başarılı";
+        }
+        public async Task<List<ResultUsersDto>> GetAllUserAsync()
+        {
+            var users = await _userManager.Users.Select(user => new ResultUsersDto
+                 {
+                     Name = user.Name,
+                     SurName = user.Surname,
+                     Email = user.Email
+                 })
+                 .ToListAsync();
+
+            return users;
         }
     }
 }
