@@ -1,7 +1,6 @@
 ﻿namespace TheShop.Identity.Dtos
 {
     public class CreateRegisterDto
-
     {
         public string Name { get; set; }
         public string SurName { get; set; }
