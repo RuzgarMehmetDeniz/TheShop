@@ -2,7 +2,6 @@
 
 namespace TheShop.Identity.Services.UserServices
 {
-
     public interface IUserService
     {
         Task<bool> CreateUserAsync(CreateRegisterDto createRegisterDto);
