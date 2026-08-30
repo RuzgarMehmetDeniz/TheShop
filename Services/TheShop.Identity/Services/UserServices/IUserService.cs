@@ -1,7 +1,6 @@
 ﻿using TheShop.Identity.Dtos;
 
 namespace TheShop.Identity.Services.UserServices
-
 {
     public interface IUserService
     {
