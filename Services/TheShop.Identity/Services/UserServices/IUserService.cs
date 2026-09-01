@@ -9,3 +9,4 @@ namespace TheShop.Identity.Services.UserServices
         Task<List<ResultUsersDto>> GetAllUserAsync();
     }
 }
+
