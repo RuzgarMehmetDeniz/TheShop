@@ -10,4 +10,3 @@ namespace TheShop.Identity.Services.UserServices
     }
 }
 
-
