@@ -7,6 +7,7 @@ namespace TheShop.Catalog.Services.ProductServices
         Task<List<ResultProductDto>> GetAllProductAsync();
 
         Task<GetByIdProductDto> GetByIdProductAsync(string id);
+        Task<List<ResultProductDto>> GetProductsByCategoryIdAsync(string categoryId);  
 
         Task CreateProductAsync(CreateProductDto createProductDto);
 

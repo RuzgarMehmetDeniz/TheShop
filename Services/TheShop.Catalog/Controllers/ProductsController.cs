@@ -29,7 +29,12 @@ namespace TheShop.Catalog.Controllers
             var value = await _productService.GetByIdProductAsync(id);
             return Ok(value);
         }
-
+        [HttpGet("GetByCategory/{categoryId}")]
+        public async Task<IActionResult> GetProductsByCategoryId(string categoryId)
+        {
+            var values = await _productService.GetProductsByCategoryIdAsync(categoryId);
+            return Ok(values);
+        }
         [HttpPost]
         public async Task<IActionResult> CreateProduct(CreateProductDto createProductDto)
         {
