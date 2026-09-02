@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Options;
+using TheShop.Catalog.Middlewares;
 using TheShop.Catalog.Services.CategoryServices;
 using TheShop.Catalog.Services.ProductServices;
 using TheShop.Catalog.Settings;
@@ -20,6 +21,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseGlobalExceptionHandler();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
